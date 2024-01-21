@@ -15,7 +15,7 @@ def fibonacci_series(n):
         return series
 
 # Get input from the user
-nterms = int(input("Enter the number of terms: "))
+nterms = int(input("Enter the number of terms: 10"))
 
 # Call the function and print the result
 print(fibonacci_series(nterms))
