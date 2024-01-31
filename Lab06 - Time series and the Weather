@@ -1,0 +1,31 @@
+## Temperature Time Series
+
+I would like you to download the LAN-WX.csv file into your working directory for this notebook and use it for today's exercise.  Provided the page is up (it wasn't earlier), you can find documentation about each of the columns in the CSV file here: 
+https://www1.ncdc.noaa.gov/pub/data/cdo/documentation/GHCND_documentation.pdf
+
+For the purposes of our exercise, we are most interested in these columns:
+* DATE
+* TMIN the minimum daily temperature
+* TMAX the maximum daily temperature
+
+I would like you to do the following:
+* As with today's lecture, convert the DATE column into a temporal-based index for the data frame.
+* Using this and the methods from today, I'd like you to do the following:
+    1. Display a table that shows the maximum daily temperatures for each month in the year 2013.
+    2. Find the maximum temperature in Lansing for the day of your birth and each birthday thereafter and plot it as a violin plot and histogram using Seaborn.
+    3. Find the decade maximum high and low temperature from 1950.  Plot both the maximum and minimum values as a single line plot.
+    4. This class started on Jaunary 11, 2020 and runs for 16 weeks. It meets on Mondays and Wednesdays. Use boxplots to plot the historical distribution from 1960 onward of high temperatures for each date we meet this semester.  In other words, plot the range of maximum temperatures for each (month,day) value in the 2020 course calendar across all years from 1960 onward.
+    5. The number of 90&deg;F days per year are often used to describe climate change.  Plot the average number of 90&deg;F days as a rolling average over 5 years across the entire data set. 
+    
+**Create markdown cells to annotate your work using the directions above to create cells with level-2 headings** and the descriptions above in them.  (You do remember your Markdown?)
+
+Note:  You will likely have to use Google and the Pandas documnetation quite a bit to answer the questions above.  This is normal!  
+
+%pip install pandas
+%pip install seaborn
+%pip install matplotlib
+import pandas as pd
+import datetime
+import dateutil
+import seaborn as sns
+import matplotlib.pyplot as plt
